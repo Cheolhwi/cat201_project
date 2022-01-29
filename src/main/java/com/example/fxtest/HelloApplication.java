@@ -276,7 +276,7 @@ public class HelloApplication extends Application {
         int loop_number=age;
         try {
             //create new thread
-            Thread t = new Thread(() -> {
+            Thread write_file = new Thread(() -> {
                 try {
                     PrintWriter pw = new PrintWriter("test.txt");
                     for (int i = 0; i < loop_number; i++) {
@@ -292,7 +292,7 @@ public class HelloApplication extends Application {
                 }
                 catch (Exception e){}
             });
-            t.start();
+            write_file.start();
         }catch(Exception e){
             System.out.println(e);
         }
