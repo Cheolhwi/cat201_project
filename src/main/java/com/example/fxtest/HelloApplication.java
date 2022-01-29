@@ -3,30 +3,18 @@ import javafx.scene.control.*;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.event.ActionEvent;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
-import javafx.application.Application;
-import javafx.geometry.Orientation;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.effect.GaussianBlur;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.*;
@@ -100,6 +88,11 @@ public class HelloApplication extends Application {
                             @Override
                             public void handle(ActionEvent event) {
                                 Stage result_page = new Stage();
+                                //border
+                                BorderPane result_border = new BorderPane();
+                                //create result_page
+                                Scene result_scene = new Scene(result_border, 720, 1200, Color.BLACK);
+                                result_page.setScene(result_scene);
                                 result_page.show();
                                 main_page.close();
                             }
